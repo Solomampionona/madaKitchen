@@ -1,0 +1,139 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Raleway:wght@200&display=swap");
+
+
+.font-baloo {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+
+.font-raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* .........................NAVBAR ..........................*/
+
+.project-navbar {
+    background-color: rgba(14, 9, 8, 0.852);
+    font-size: 1.1em;
+    box-shadow: 1px 1px 3px rgba(197, 187, 187, 0.8);
+    z-index: 1000; 
+}
+
+/* .........................BUTTONS............................. */
+
+.btn-order {
+    color: var(--bs-green);
+    border-color: var(--bs-green);
+    transition: 0.1s;
+}
+
+.btn-order:hover,
+.btn-order:active,
+.btn-final-order {
+    color: #fff;
+    background-color: var(--bs-green);
+}
+
+.btn-final-order:hover,
+.btn-final-order:active
+ {
+   
+    border-color: var(--bs-green);
+    background-color: var(--bs-green);
+    transition: 0.1s;
+    
+}
+ 
+/* BANNER  */
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center / cover fixed url(img/hanimpitoloha.jpg);
+    height: 30em;
+}
+
+.banner-title {
+    font-size: 3em;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* SECTION MENU */
+
+section.menu {
+    background: #554545;
+    background: linear-gradient(to right, #d8ebc1, #3fa138);
+    min-height: 80rem;
+}
+
+/* ...........................ORDER-FORM ......................................*/
+
+.order-form {
+    border-top: 1px solid rgba(55, 161, 26, 0.8);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center / cover fixed url(img/achards.jpeg);
+    min-height: 30rem;
+}
+
+.order-form .input-group span:hover, label:hover {
+    background-color: var(--bs-green);
+    color:rgba(255, 255, 255, 0.8);
+}
+.order-form .input-group input:focus {
+    border: rgb(0, 153, 255) ;
+}
+
+
+/* ..............................IMAGES .....................................*/
+
+img.w-100 {
+    height: 22em;
+}
+
+section.menu img {
+    height: 21em;
+}
+/*.................................FOOTER...................................*/
+
+
+
+footer {
+background-color: rgba(28, 25, 24, 0.852);
+font-size: 1.5em;
+box-shadow: 1px 1px 3px rgba(226, 219, 219, 0.8);
+color: #fff;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    /* soulignement des liens du menu au hover */
+
+    .project-navbar .nav-link {
+        position: relative;
+    }
+
+    .project-navbar .nav-link::after {
+        content: "";
+
+        position: absolute;
+        top: 2.5rem;
+        left: 0.2rem;
+
+        height: 0.1rem;
+        width: 0;
+        transition: width 0.4s;
+
+        background-color: var(--bs-green);
+    }
+
+    .project-navbar .nav-link:hover:after {
+        width: 100%;
+    }
+
+    /* hauteur de la photo sous le header */
+    .banner {
+        height: 60rem;
+    }
+
+}

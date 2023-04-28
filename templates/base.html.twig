@@ -1,19 +1,341 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bienvenue Sur MadaKitchen{% endblock %}</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+     <!--     //NAVBAR//     -->
+    <nav class="project-navbar position-fixed w-100 navbar navbar-expand-lg navbar-dark font-baloo">
+        <div class="container-fluid">
+            <a href="http://localhost/#" class="navbar-brand">
+            <img src="madaKitchen/img" class="fs-small" alt="logo_MadaKitchen">
+            </a>
+            <span class="navbar-text text-uppercase fw-bolder fs-5">Mada Kitchen</span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+               
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link active " aria-current="page" href="http://localhost/#">Acceuil</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Produits</a>
+                          <div class="dropdown-menu pe-4">
+                            <a class="dropdown-item " href="http://localhost/#">Boissons</a>
+                            <a class="dropdown-item" href="http://localhost/#">Plats</a>
+                            <a class="dropdown-item" href="http://localhost/#">Desserts</a>
+                          </div>
+                        </li> 
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="http://localhost/#contact">Contact</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="http://localhost/#panier">Panier</a>
+                    </li>
+                    <!-- ADD : one more .nav-item -->
+                    <li class="nav-item pe-4">
+                       
+                       
+                        <a class="btn btn-order" href="http://localhost/#connect">CONNEXION</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!--   //PERSONNAL BANNER//      -->
+   <section class="banner d-flex justify-content-center align-items-center pt-5">
+         <div class="container my-5 py-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-6">
+                    <h1 class="text- py-3 font-baloo banner-title text-white-50">
+                    
+                            Bienvenue,
+                            nous vous invitons à découvrir  une cuisine Malgache faite avec amour.   
+                    </h1>                  
+                    <button class="btn btn-order border-3 rounded-0 me-5 btn-lg font-raleway fw-bolder">S'INSCRIRE</button>
+                    <button class="btn btn-order border-3 rounded-0 me-5 btn-lg font-raleway fw-bolder">SE CONNECTER</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--       //CARDS 1 //       -->
+    <section class="img font-raleway py-5" id="discover">
+        <div class="container">
+            <div class="row">         
+                <div class="card my-5 px-0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://picsum.photos/200/300?grayscale" class="img-fluid rounded-1" alt="ravitoto">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title">Suggestion du chef</h3>
+                                <p class="card-text">La ravitoto est un plat traditionnel de Madagascar, il s'agit de jeunes feuilles de manioc pilées. Conseils d'utilisation: faire revenir 600g de porc ou de boeuf dans un peu d'huile avec une gousse d'ail écrasée et 2 oignons émincés. Ajouter 1l d'eau et laisser mijoter 1h environ.</p>
+                                <p class="card-text"><a href="http://localhost/#" class="text-muted btn">Last updated 3 mins ago</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <!--       //CARD 2 //    -->
+                <div class="card my-5 px-0">
+                    <div class="row">
+                        <!--................... CARROUSEL ...................-->
+                     <div class="col-md-6 order-md-2">
+                            <div id="btn-controls" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#btn-controls" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#btn-controls" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                                    <button type="button" data-bs-target="#btn-controls" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/200/298?grayscale" class="d-block w-100 rounded-1" alt="crevette sauce au coco">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/199/300?grayscale" class="d-block w-100 rounded-1" alt="henomby ritra">
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img src="https://picsum.photos/200/299?grayscale" class="d-block w-100 rounded-1" alt="romazava">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#btn-controls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Précedent</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#btn-controls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Suivant</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title">Nos Plats</h3>
+                                <p class="card-text">This is a wider card with supporting text below as a natural ead-in
+                                    to additional content. This content is a little bit longer.This is a wider card with
+                                    supporting text below as a natural ead-in to additional content. This content is a
+                                    little bit longer.This is a wider card with supporting text below as a natural
+                                    ead-in to additional content. This content is a little bit longer.</p>
+                                <!-- CHANGE :  <small> to <a> -->
+                                <!-- ADD : .btn -->
+                                <p class="card-text"><a href="http://localhost/#" class="text-muted btn">Last updated 3 mins ago</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--................... CARD 3 ................... -->
+                      <div class="card my-5 px-0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://picsum.photos/198/300?grayscale" class="img-fluid" alt="voanjobory">
+                        </div>
+                        <!-- CHANGE : .col-md-6 -->
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title">Notre Spécialité</h3>
+                                <p class="card-text"><strong> Voanjobory</strong> : également appelé pois de Bambara ou pois de terre, est une légumineuse très présente dans la gastronomie malgache. À Madagascar, où il est plus connu sous le nom de Voanjobory, il donne son nom à un plat traditionnel, sorte de ragoût, consommé le dimanche en famille.</p>
+                                <p class="card-text"><a href="http://localhost/#" class="text-muted btn">Last updated 3 mins ago</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--.. *******************  MENU  **************************** ..-->
+    <section class="menu font-baloo py-5" id="menu">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center text-light">Nos Services</h2>
+                <!--............. CARD NAVIGATION ..............-->
+                <div class="card text-center bg-transparent mb-4">
+                    <div class="card-header fs-4 my-3">
+                        <!-- ADD :  justify-content-center -->
+                        <ul class="nav nav-tabs card-header-tabs justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="true" href="http://localhost/#">Sur Place</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="http://localhost/#">A emporter</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body text-light">
+                        <h4 class="card-title">We have something for everyone...</h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, unde!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--............. GRID CARDS ..............-->    
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/297?grayscale" class="card-img-top" alt="banane flambé">
+                        <div class="card-body">
+                            <h3 class="card-title">Banane Flambeé</h3>
+                            <p class="card-text text-black-50">Une recette de dessert,étendue aux cuisine antillaise et cuisine réunionnaise, variante du banana split, à base de banane caramélisée à la glace à la vanille de Madagascar, flambée au rhum du pays.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://picsum.photos/198/300?grayscale" class="card-img-top" alt="salade de fruits">
+                        <div class="card-body">
+                            <h3 class="card-title">Achards </h3>
+                            <p class="card-text text-black-50">This is a longer card with supporting text below as ahis is a longer card with supporting text bel
+                                natural lead-inhis is a longer card with supporting text bel
+                                to additional
+                                content.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ADD : .d-none .d-md-block -->
+                <div class="col d-none d-md-block">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/297?grayscale" class="card-img-top" alt="koba an Talata">
+                        <div class="card-body">
+                            <h3 class="card-title">Desserts</h3>
+                            <p class="card-text-50">Le koba est un cake fait avec de la farine de riz, des cacahuètes pillées et cuit au bain - marie dans des feuilles de bananier. C
+                                .</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-none d-md-block">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/301?grayscale" class="card-img-top" alt="bieres">
+                        <div class="card-body">
+                            <h3 class="card-title">Nos Services</h3>
+                            <p class="card-text text-black-50">Nos rhums arrangés/Nos rhums 
+                                arrangésNos rhums arrangés/nos cocktails faits maison    </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--  ORDER  -->
+    <section class="order-form py-5 pt-5" id="placeOrder">
+        <div class="container pt-5">
+            <h2 class="font-baloo text-center text-light mb-4">Passez votre commande</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--INPUT GROUP -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"> <i class="fas fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Votre nom et Prenom">
+                         </div>
+                         <!--INPUT GROUPS -->
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-utensils"></i></label>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected="">Faites votre choix</option>
+                                <option value="1">Viandes</option>
+                                <option value="2">Fruits de Mer</option>
+                                <option value="3">Desserts</option>
+                            </select>
+                         </div>
+                         <!-- INPUT GROUPS -->
+                        <div class="input-group mb-3">
+                    
+                            <label class="input-group-text" for="inputGroupSelect02"><i class="fas fa-sort-amount-up"></i></label>
+                            <select class="form-select" id="inputGroupSelect02">
+                                <option selected="">Combien de personnes ?</option>
+                                <option value="1">Une personne</option>
+                                <option value="2">deux personnes</option>
+                                <option value="3">Trois personnes</option>
+                                <option value="+">+de quatres</option>
+                            </select>
+                        </div>
+                   </div>
+                    <div class="col-md-6">      
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="adresse mail">
+
+                            <span class="input-group-text" id="basic-addon2"> <i class="fas fa-at"></i>
+                            </span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="tel" class="form-control" placeholder="06 ** ** ** **">
+                            <span class="input-group-text" id="basic-addon3"> <i class="fas fa-phone"></i>
+                            </span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Paris ">
+                            <span class="input-group-text" id="basic-addon4"> <i class="fas fa-home"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                                     
+                <a href="http://localhost/#" class="btn btn-final-order d-block mt-2 fs-5">Pour commander</a>
+            </form>
+        </div>
+    </section> 
+    <!--.. ******************   IFRAME  ************************** ..-->
+       <iframe class="w-100 my-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21083.252251295246!2d2.219114357964506!3d48.659467470379155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d79f1f7eb759%3A0x98a7d426a8f67be7!2s91620%20Nozay!5e0!3m2!1sfr!2sfr!4v1680682097367!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!--.. ******************  FOOTER  *************************** ..-->
+    <footer class="container-fluid text-center pb-2">
+        <div class="row">
+            <div class="col-sm-4 mb-4">
+                <h5 class="fs-5"></h5>                    
+                <!--............. VERTICAL NAV ..............-->
+                <nav class="nav flex-column">
+                    <a class="nav-link py-1 fs-6 text-secondary active" aria-current="page" href="http://localhost/#">Nozay</a>
+                    <a class="nav-link py-1 fs-6 text-secondary active" href="http://localhost/#">Paris</a>
+                    <a class="nav-link py-1 fs-6 text-secondary active" href="http://localhost/#">Montpellier</a>
+               </nav>
+            </div>
+            <div class="col-sm-4 mb-4">
+                <h5 class="fs-5"></h5>
+                <!--............. VERTICAL NAV ..............-->
+                <nav class="nav flex-column">
+                    <a class="nav-link py-1 fs-6 text-secondary active" aria-current="page" href="http://localhost/#">Avis</a>
+                    <a class="nav-link py-1 fs-6 text-secondary active" href="http://localhost/#">Trip Advisor</a>
+                    <a class="nav-link py-1 fs-6 text-secondary active" href="http://localhost/#">Mention légales</a>
+                   
+                </nav>
+            </div>
+
+            <div class="col-sm-4 mb-4">
+                <h5 class="fs-5"></h5>
+                <!--............. VERTICAL NAV ..............-->
+                <nav class="nav flex-column">     
+                    <a href="https://fr-fr.facebook.com/" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="https://www.instagram.com/?hl=fr" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-instagram-square "></i></a>
+                    <a href="https://twitter.com/home" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-twitter-square"></i></a>     
+                </nav>
+            </div>
+
+            <div class="row text-center text-muted mt-1">
+                <small> Copyright ©  Mada Kitchens.Tous droits réservés.</small>
+            </div>
+    </div></footer>
+
+     <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core theme JS-->
+    <script src="{{ asset('js/scripts.js') }}"></script>
+    {% block js %}{% endblock %}
+</body></html>
+
