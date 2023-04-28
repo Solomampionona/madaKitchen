@@ -20,14 +20,9 @@ class Product
     #[ORM\Column]
     private ?float $prix = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $imagec = null;
 
     #[ORM\Column(length: 50)]
     private ?string $nom = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $image = null;
 
     public function getId(): ?int
     {
@@ -58,17 +53,6 @@ class Product
         return $this;
     }
 
-    public function getImagec(): ?string
-    {
-        return $this->imagec;
-    }
-
-    public function setImagec(string $imagec): self
-    {
-        $this->imagec = $imagec;
-
-        return $this;
-    }
 
     public function getNom(): ?string
     {
@@ -78,18 +62,6 @@ class Product
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
 
         return $this;
     }
